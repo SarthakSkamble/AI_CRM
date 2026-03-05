@@ -54,7 +54,7 @@ async function lead_create(req, res) {
     });
 
   } catch (err) {
-    console.error(err);
+    console.log(err);
     return res.status(500).json({
       msg: "Internal server error"
     });
