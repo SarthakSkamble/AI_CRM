@@ -1,0 +1,28 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend of AI CRM ",
+  "main": "server.js ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SarthakSkamble/AI_CRM.git"
+  },
+  "author": "Sarthak kamble",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SarthakSkamble/AI_CRM/issues"
+  },
+  "homepage": "https://github.com/SarthakSkamble/AI_CRM#readme",
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.4.1",
+    "@prisma/client": "^7.4.1",
+    "argon2": "^0.44.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "prisma": "^7.4.1"
+  }
+}
