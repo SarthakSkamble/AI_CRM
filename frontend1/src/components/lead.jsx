@@ -96,6 +96,10 @@ export default function Leads() {
                   <th className="border p-2 max-w-[180px]">Email</th>
                   <th className="border p-2 max-w-[220px]">Address</th>
                   <th className="border p-2">Source</th>
+                  <th className="border p-2">Age</th>
+                  <th className="border p-2">City</th>
+                  <th className="border p-2">Calls Count</th>
+                  <th className="border p-2">Emails Sent</th>
                   <th className="border p-2">Created</th>
                   <th className="border p-2">Action</th>
                 </tr>
@@ -133,6 +137,10 @@ export default function Leads() {
                     </td>
 
                     <td className="border p-2">{lead.source}</td>
+                    <td className="border p-2">{lead.age}</td>
+                    <td className="border p-2">{lead.city}</td>
+                    <td className="border p-2">{lead.calls_made}</td>
+                    <td className="border p-2">{lead.emails_sent}</td>
 
                     <td className="border p-2">
                       {new Date(lead.createdAt).toLocaleString()}

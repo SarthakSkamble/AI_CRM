@@ -10,6 +10,10 @@ export default function AddLeadModal({ onClose, onLeadCreated }) {
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
   const [source, setSource] = useState("");
+  const [age, setage] = useState("");
+  const [city, setcity] = useState("");
+  const [calls_made, setcalls] = useState("");
+  const [emails_sent, setemails] = useState("");
   const [msg, setMsg] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -39,6 +43,10 @@ export default function AddLeadModal({ onClose, onLeadCreated }) {
             email,
             address,
             source,
+            age:Number(age),
+      city,
+      calls_made:Number(calls_made),
+      emails_sent:Number(emails_sent)
           }),
         }
       );
@@ -156,6 +164,39 @@ export default function AddLeadModal({ onClose, onLeadCreated }) {
             className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-slate-400"
             value={source}
             onChange={(e) => setSource(e.target.value)}
+          />
+        </div>
+        <div className="flex flex-col">
+          <label className="text-sm font-medium mb-2 text-gray-700">Age</label>
+          <input
+          type="number"
+            className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-slate-400"
+            value={age}
+            onChange={(e) => setage(e.target.value)}
+          />
+        </div>
+        <div className="flex flex-col">
+          <label className="text-sm font-medium mb-2 text-gray-700">City</label>
+          <input
+            className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-slate-400"
+            value={city}
+            onChange={(e) => setcity(e.target.value)}
+          />
+        </div>
+        <div className="flex flex-col">
+          <label className="text-sm font-medium mb-2 text-gray-700">Calls Count</label>
+          <input
+            className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-slate-400"
+            value={calls_made}
+            onChange={(e) => setcalls(e.target.value)}
+          />
+        </div>
+        <div className="flex flex-col">
+          <label className="text-sm font-medium mb-2 text-gray-700">Emails Sent</label>
+          <input
+            className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-slate-400"
+            value={emails_sent}
+            onChange={(e) => setemails(e.target.value)}
           />
         </div>
 
