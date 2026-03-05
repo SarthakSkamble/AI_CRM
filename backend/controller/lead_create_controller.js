@@ -11,7 +11,11 @@ async function lead_create(req, res) {
       phone,
       email,
       address,
-      source
+      source,
+      age,
+      city,
+      calls_made,
+      emails_sent
     } = req.body;
 
     if (!Name || !phone || !email || !lead_status || !source) {
@@ -35,7 +39,11 @@ async function lead_create(req, res) {
         phone,
         email,
         address,
-        source,                
+        source,         
+        age,
+      city,
+      calls_made,
+      emails_sent       
          
       }
     });
