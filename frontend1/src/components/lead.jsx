@@ -70,7 +70,7 @@ export default function Leads() {
           <h2 className="text-2xl font-bold">Leads</h2>
 
           <button
-            onClick={() => setShowAddModal(true)}
+            onClick={() => {setShowAddModal(true)}}
             className="bg-slate-600 text-white px-4 py-2 rounded hover:bg-slate-700"
           >
             Add Lead
