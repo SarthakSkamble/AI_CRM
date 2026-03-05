@@ -16,7 +16,7 @@ export default function Opportunity_search(){
             const token = localStorage.getItem("token");
             if(stage==="all"){
                 const oppRes = await fetch(
-              "http://localhost:3000/api/v1/opportunity/controled_opportunity",
+              "https://ai-crm-kb9x.onrender.com/api/v1/opportunity/controled_opportunity",
               {
                 method:"POST",
                 headers: {
@@ -36,7 +36,7 @@ export default function Opportunity_search(){
             else{
            
             const oppRes = await fetch(
-              "http://localhost:3000/api/v1/opportunity/controled_opportunity",
+              "https://ai-crm-kb9x.onrender.com/api/v1/opportunity/controled_opportunity",
               {
                 method:"POST",
                 headers: {
@@ -56,7 +56,7 @@ export default function Opportunity_search(){
             const mergedData = await Promise.all(
               opportunities.map(async (opp) => {
                 const leadRes = await fetch(
-                  `http://localhost:3000/api/v1/lead/leadid_search`,
+                  `https://ai-crm-kb9x.onrender.com/api/v1/lead/leadid_search`,
                   {
                     method:"POST",
                     headers: {

@@ -22,7 +22,7 @@ export default function AddLeadModal({ onClose, onLeadCreated }) {
       const token = localStorage.getItem("token");
 
       const res = await fetch(
-        "http://localhost:3000/api/v1/lead/create_lead",
+        "https://ai-crm-kb9x.onrender.com/api/v1/lead/create_lead",
         {
           method: "POST",
           headers: {

@@ -91,10 +91,8 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-100 text-gray-500 text-center py-6">
-        © {new Date().getFullYear()} APIVision CRM. All rights reserved.
-      </footer>
+     
+      
     </div>
   );
 }

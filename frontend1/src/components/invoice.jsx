@@ -15,7 +15,7 @@ useEffect(()=>{
 async function fetchData(){
 
 const orderReq = await fetch(
-"http://localhost:3000/api/v1/orders/get_order_by_id",
+"https://ai-crm-kb9x.onrender.com/api/v1/orders/get_order_by_id",
 {
 method:"POST",
 headers:{
@@ -31,7 +31,7 @@ const orderData = orderRes.data
 setOrder(orderData)
 
 const oppReq = await fetch(
-"http://localhost:3000/api/v1/orders/get_opportunity_by_id",
+"https://ai-crm-kb9x.onrender.com/api/v1/orders/get_opportunity_by_id",
 {
 method:"POST",
 headers:{
@@ -46,7 +46,7 @@ const oppRes = await oppReq.json()
 setOpportunity(oppRes.data)
 
 const leadReq = await fetch(
-"http://localhost:3000/api/v1/orders/get_lead_by_id",
+"https://ai-crm-kb9x.onrender.com/api/v1/orders/get_lead_by_id",
 {
 method:"POST",
 headers:{

@@ -31,7 +31,7 @@ export default function CreateOpportunity({ onClose }) {
       const token = localStorage.getItem("token");
 
       const res = await fetch(
-        "http://localhost:3000/api/v1/lead/convert",
+        "https://ai-crm-kb9x.onrender.com/api/v1/lead/convert",
         {
           method: "POST",
           headers: {
@@ -61,7 +61,7 @@ export default function CreateOpportunity({ onClose }) {
         return;
       }
 
-      setMsg("Opportunity created successfully ✅");
+      setMsg("Opportunity created successfully");
 
       setClosingDate("");
       setAmount("");

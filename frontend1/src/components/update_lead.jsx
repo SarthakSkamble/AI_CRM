@@ -44,7 +44,7 @@ export default function UpdateLeadModal({ onClose }) {
       const token = localStorage.getItem("token");
 
       const res = await fetch(
-        "http://localhost:3000/api/v1/lead/update_lead",
+        "https://ai-crm-kb9x.onrender.com/api/v1/lead/update_lead",
         {
           method: "PUT",
           headers: {

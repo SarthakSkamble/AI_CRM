@@ -25,7 +25,7 @@ export default function Opportunity() {
 
        
         const oppRes = await fetch(
-          "http://localhost:3000/api/v1/opportunity/get_opportunity",
+          "https://ai-crm-kb9x.onrender.com/api/v1/opportunity/get_opportunity",
           {
             headers: {
               "Content-Type": "application/json",
@@ -41,7 +41,7 @@ export default function Opportunity() {
         const mergedData = await Promise.all(
           opportunities.map(async (opp) => {
             const leadRes = await fetch(
-              `http://localhost:3000/api/v1/lead/leadid_search`,
+              `https://ai-crm-kb9x.onrender.com/api/v1/lead/leadid_search`,
               {
                 method:"POST",
                 headers: {

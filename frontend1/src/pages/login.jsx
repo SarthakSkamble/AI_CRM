@@ -21,7 +21,7 @@ export default function Login() {
       setLoading(true);
       setMessage("");
 
-      const response = await fetch("http://localhost:3000/api/v1/login/", {
+      const response = await fetch("https://ai-crm-kb9x.onrender.com/api/v1/login/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

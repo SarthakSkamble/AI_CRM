@@ -18,7 +18,7 @@ export default function Order() {
 
     async function fetchOrders() {
 
-      let url = "http://localhost:3000/api/v1/orders/get_orders"
+      let url = "https://ai-crm-kb9x.onrender.com/api/v1/orders/get_orders"
       let options = {
         headers:{
           "Content-Type":"application/json",
@@ -28,7 +28,7 @@ export default function Order() {
 
       if(filter !== "all"){
 
-        url = "http://localhost:3000/api/v1/orders/get_controlled_orders"
+        url = "https://ai-crm-kb9x.onrender.com/api/v1/orders/get_controlled_orders"
 
         let bodyData = {}
 
@@ -57,7 +57,7 @@ export default function Order() {
       const ordersWithData = await Promise.all(
         ordersData.map(async (order) => {
 
-          const itemData = await fetch("http://localhost:3000/api/v1/orders/get_items", {
+          const itemData = await fetch("https://ai-crm-kb9x.onrender.com/api/v1/orders/get_items", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -70,7 +70,7 @@ export default function Order() {
 
           const itemsRes = await itemData.json();
 
-          const oppData = await fetch("http://localhost:3000/api/v1/orders/get_opportunity_by_id",{
+          const oppData = await fetch("https://ai-crm-kb9x.onrender.com/api/v1/orders/get_opportunity_by_id",{
             method:"POST",
             headers:{
               "Content-Type":"application/json",
@@ -103,7 +103,7 @@ export default function Order() {
 
   async function getLead(lead_id){
 
-    const data = await fetch("http://localhost:3000/api/v1/orders/get_lead_by_id",{
+    const data = await fetch("https://ai-crm-kb9x.onrender.com/api/v1/orders/get_lead_by_id",{
       method:"POST",
       headers:{
         "Content-Type":"application/json",
@@ -123,7 +123,7 @@ export default function Order() {
 
   async function getOpportunity(opportunity_id){
 
-    const data = await fetch("http://localhost:3000/api/v1/orders/get_opportunity_by_id",{
+    const data = await fetch("https://ai-crm-kb9x.onrender.com/api/v1/orders/get_opportunity_by_id",{
       method:"POST",
       headers:{
         "Content-Type":"application/json",
@@ -149,7 +149,7 @@ export default function Order() {
 
           <h2 className="text-2xl font-bold mb-4">Orders</h2>
 
-{/* FILTER SELECT */}
+
 
 <div className="mb-4">
 <select

@@ -23,7 +23,7 @@ export default function Update_order({ onClose }) {
       setLoading(true);
 
       const data = await fetch(
-        "http://localhost:3000/api/v1/orders/update_order",
+        "https://ai-crm-kb9x.onrender.com/api/v1/orders/update_order",
         {
           method: "PUT",
           headers: {

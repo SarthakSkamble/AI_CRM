@@ -21,7 +21,7 @@ export default function Leads() {
         const token = localStorage.getItem("token");
 
         const res = await fetch(
-          "http://localhost:3000/api/v1/lead/leads_search",
+          "https://ai-crm-kb9x.onrender.com/api/v1/lead/leads_search",
           {
             headers: {
               "Content-Type": "application/json",
@@ -58,7 +58,7 @@ export default function Leads() {
   return (
     <div className="relative">
 
-      {/* BLUR CONTENT WHEN MODAL OPEN */}
+      
       <div
         className={
           showAddModal || showUpdateModal || showConvertModal
@@ -124,7 +124,7 @@ export default function Leads() {
                       {lead.email}
                     </td>
 
-                    {/* ADDRESS */}
+                    
                     <td
                       title={lead.address}
                       className="border p-2 break-words max-w-[220px]"
@@ -138,7 +138,7 @@ export default function Leads() {
                       {new Date(lead.createdAt).toLocaleString()}
                     </td>
 
-                    {/* ACTIONS */}
+                   
                     <td className="border p-2 space-y-1">
                       <button
                         onClick={() => {
@@ -175,7 +175,6 @@ export default function Leads() {
         )}
       </div>
 
-      {/* ADD LEAD MODAL */}
       {showAddModal && (
         <AddLeadModal
           onClose={() => setShowAddModal(false)}
@@ -185,7 +184,6 @@ export default function Leads() {
         />
       )}
 
-      {/* UPDATE LEAD MODAL */}
       {showUpdateModal && (
         <UpdateLeadModal
           onClose={() => {
@@ -195,7 +193,7 @@ export default function Leads() {
         />
       )}
 
-      {/* CONVERT TO OPPORTUNITY MODAL */}
+      
       {showConvertModal && (
         <div className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center p-6">
           <div className="relative max-h-[90vh] overflow-y-auto">

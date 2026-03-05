@@ -24,7 +24,7 @@ export default function Home() {
     async function loadCounts(){
 
       const res = await fetch(
-        "http://localhost:3000/api/v1/organization/get_count",
+        "https://ai-crm-kb9x.onrender.com/api/v1/organization/get_count",
         {
           headers:{
             Authorization:`Bearer ${token}`,

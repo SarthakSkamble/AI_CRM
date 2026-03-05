@@ -26,7 +26,7 @@ const fetchServices = async()=>{
     
 
 const res = await fetch(
-  "http://localhost:3000/api/v1/opportunity/get_services",
+  "https://ai-crm-kb9x.onrender.com/api/v1/opportunity/get_services",
   {
     headers: {
       Authorization: `Bearer ${token}`,
@@ -113,7 +113,7 @@ notes,
 listofitems:items
 }
 
-await fetch("http://localhost:3000/api/v1/opportunity/create_order",{
+await fetch("https://ai-crm-kb9x.onrender.com/api/v1/opportunity/create_order",{
 method:"POST",
 headers:{
 "Content-Type":"application/json",

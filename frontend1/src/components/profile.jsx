@@ -12,7 +12,7 @@ export default function UserProfile() {
       const token = localStorage.getItem("token");
 
       const userRes = await fetch(
-        "http://localhost:3000/api/v1/user/user_info",
+        "https://ai-crm-kb9x.onrender.com/api/v1/user/user_info",
         {
           headers: {
             "Content-Type": "application/json",
@@ -40,7 +40,7 @@ export default function UserProfile() {
       }
 
       const orgRes = await fetch(
-        "http://localhost:3000/api/v1/organization/organization_info",
+        "https://ai-crm-kb9x.onrender.com/api/v1/organization/organization_info",
         {
           headers: {
             "Content-Type": "application/json",

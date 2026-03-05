@@ -14,7 +14,7 @@ export default function Search_lead() {
         let res;
 
         if (state === "my_leads") {
-          res = await fetch("http://localhost:3000/api/v1/lead/my_leads", {
+          res = await fetch("https://ai-crm-kb9x.onrender.com/api/v1/lead/my_leads", {
             headers: {
               "Content-Type": "application/json",
               Authorization: `Bearer ${token}`,
@@ -23,7 +23,7 @@ export default function Search_lead() {
         } 
         
         else if (state === "all_leads") {
-          res = await fetch("http://localhost:3000/api/v1/lead/leads_search", {
+          res = await fetch("https://ai-crm-kb9x.onrender.com/api/v1/lead/leads_search", {
             headers: {
               "Content-Type": "application/json",
               Authorization: `Bearer ${token}`,
@@ -33,7 +33,7 @@ export default function Search_lead() {
         
         else {
           res = await fetch(
-            "http://localhost:3000/api/v1/lead/controlled_search",
+            "https://ai-crm-kb9x.onrender.com/api/v1/lead/controlled_search",
             {
               method: "POST",
               headers: {

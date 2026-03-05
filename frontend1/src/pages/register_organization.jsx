@@ -63,7 +63,7 @@ export default function RegisterOrganization() {
 
     try {
       const res = await fetch(
-        "http://localhost:3000/api/v1/orgnization_registration/",
+        "https://ai-crm-kb9x.onrender.com/api/v1/orgnization_registration/",
         {
           method: "POST",
           headers: {
@@ -191,7 +191,7 @@ export default function RegisterOrganization() {
             </div>
           </div>
 
-          {/* Services Section */}
+         
           <div>
             <h2 className="text-xl font-semibold mb-4">
               Services Provided

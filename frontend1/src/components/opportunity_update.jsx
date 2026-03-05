@@ -47,7 +47,7 @@ export default function Update_opportunity({onClose}){
   const handleSubmit= async (e)=>{
     e.preventDefault();
     const token = localStorage.getItem("token");
-    const data= await fetch("http://localhost:3000/api/v1/opportunity/update_opportunity",{
+    const data= await fetch("https://ai-crm-kb9x.onrender.com/api/v1/opportunity/update_opportunity",{
         method:"PUT",
         headers: {
             "Content-Type": "application/json",

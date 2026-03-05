@@ -26,7 +26,7 @@ Authorization:`Bearer ${token}`,
 "Content-Type":"application/json"
 }
 
-const org = await fetch("http://localhost:3000/api/v1/organization/organization_info",{headers})
+const org = await fetch("https://ai-crm-kb9x.onrender.com/api/v1/organization/organization_info",{headers})
 const orgData = await org.json()
 
 setOrganizationName(orgData.data.organization_name)
@@ -35,27 +35,27 @@ setIndustryType(orgData.data.industry_type)
 setCountry(orgData.data.country)
 setPreferredLanguage(orgData.data.preferred_language)
 
-const servicesRes = await fetch("http://localhost:3000/api/v1/opportunity/get_services",{headers})
+const servicesRes = await fetch("https://ai-crm-kb9x.onrender.com/api/v1/opportunity/get_services",{headers})
 const servicesData = await servicesRes.json()
 setServices(servicesData.data)
 
-const adminRes = await fetch("http://localhost:3000/api/v1/organization/get_all_admins",{headers})
+const adminRes = await fetch("https://ai-crm-kb9x.onrender.com/api/v1/organization/get_all_admins",{headers})
 const adminData = await adminRes.json()
 setAdmins(adminData.data)
 
-const userRes = await fetch("http://localhost:3000/api/v1/organization/get_all_users",{headers})
+const userRes = await fetch("https://ai-crm-kb9x.onrender.com/api/v1/organization/get_all_users",{headers})
 const userData = await userRes.json()
 setUsers(userData.data)
 
-const leadRes = await fetch("http://localhost:3000/api/v1/organization/get_all_leads",{headers})
+const leadRes = await fetch("https://ai-crm-kb9x.onrender.com/api/v1/organization/get_all_leads",{headers})
 const leadData = await leadRes.json()
 setLeads(leadData.data)
 
-const oppRes = await fetch("http://localhost:3000/api/v1/organization/get_all_opportunity",{headers})
+const oppRes = await fetch("https://ai-crm-kb9x.onrender.com/api/v1/organization/get_all_opportunity",{headers})
 const oppData = await oppRes.json()
 setOpportunities(oppData.data)
 
-const orderRes = await fetch("http://localhost:3000/api/v1/organization/get_all_orders",{headers})
+const orderRes = await fetch("https://ai-crm-kb9x.onrender.com/api/v1/organization/get_all_orders",{headers})
 const orderData = await orderRes.json()
 setOrders(orderData.data)
 
