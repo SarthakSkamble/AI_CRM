@@ -77,6 +77,7 @@ model Lead{
   city String?
   calls_made Int?
   emails_sent Int?
+  lead_score Int?
   createdAt DateTime @default(now())
   organization Organization @relation(fields: [organization_id], references: [organization_id])
   opportunity Opportunity[]
