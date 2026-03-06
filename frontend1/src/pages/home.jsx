@@ -192,6 +192,7 @@ export default function Home() {
 
             <div className="grid md:grid-cols-2 gap-6">
 
+            
               <div className="bg-white p-6 rounded-lg shadow">
                 <h2 className="text-xl font-semibold mb-3">
                   Quick Actions
@@ -221,10 +222,32 @@ export default function Home() {
                   </button>
 
                 </div>
+              </div>
+
+
+              
+              <div className="bg-white p-6 rounded-lg shadow">
+
+                <h2 className="text-xl font-semibold mb-3 text-indigo-600">
+                  AI Lead Scoring
+                </h2>
+
+                <p className="text-gray-600 mb-3">
+                  Our CRM uses an AI-based lead scoring system to predict how likely
+                  a lead is to convert into a customer.
+                </p>
+
+                <ul className="list-disc ml-6 text-gray-600 space-y-2">
+                  <li>Scores are generated automatically when a lead is created</li>
+                  <li>AI analyzes age, lead source, calls made, and email interactions</li>
+                  <li>Higher scores indicate higher conversion probability</li>
+                  <li>Helps sales teams prioritize high-value leads</li>
+                </ul>
 
               </div>
 
 
+              
               <div className="bg-white p-6 rounded-lg shadow">
 
                 <h2 className="text-xl font-semibold mb-3">
