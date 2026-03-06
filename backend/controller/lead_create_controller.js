@@ -23,6 +23,28 @@ async function lead_create(req, res) {
         msg: "Required fields missing"
       });
     }
+    let score = null;
+
+try {
+  const response = await fetch("http://localhost:5001/predict", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      age,
+      source,
+      calls: calls_made,
+      emails: emails_sent
+    })
+  });
+
+  const data = await response.json();
+  score = data.score;
+
+} catch (error) {
+  console.log("AI server error:", error);
+}
 
     console.log("org",req.organization_id)
     console.log("user",req.userId)
@@ -43,10 +65,15 @@ async function lead_create(req, res) {
         age,
       city,
       calls_made,
-      emails_sent       
+      emails_sent,
+      lead_score:score       
          
       }
     });
+    
+
+    
+    
 
     return res.status(201).json({
       msg: "Lead created successfully",
