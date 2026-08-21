@@ -184,7 +184,7 @@ export default function AddLeadModal({ onClose, onLeadCreated }) {
           />
         </div>
         <div className="flex flex-col">
-          <label className="text-sm font-medium mb-2 text-gray-700">Calls Count</label>
+          <label className="text-sm font-medium mb-2 text-gray-700">Engagement Score</label>
           <input
             className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-slate-400"
             value={calls_made}
@@ -192,7 +192,7 @@ export default function AddLeadModal({ onClose, onLeadCreated }) {
           />
         </div>
         <div className="flex flex-col">
-          <label className="text-sm font-medium mb-2 text-gray-700">Emails Sent</label>
+          <label className="text-sm font-medium mb-2 text-gray-700">Time on Site</label>
           <input
             className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-slate-400"
             value={emails_sent}
