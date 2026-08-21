@@ -98,8 +98,8 @@ export default function Leads() {
                   <th className="border p-2">Source</th>
                   <th className="border p-2">Age</th>
                   <th className="border p-2">City</th>
-                  <th className="border p-2">Calls Count</th>
-                  <th className="border p-2">Emails Sent</th>
+                  <th className="border p-2">Engagement Score</th>
+                  <th className="border p-2">Time on Site</th>
 
                   <th className="border p-2">Lead Score</th>
 
