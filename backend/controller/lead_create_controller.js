@@ -35,7 +35,8 @@ try {
       age,
       source,
       calls: calls_made,
-      emails: emails_sent
+      emails: emails_sent,
+      city,
     })
   });
 
